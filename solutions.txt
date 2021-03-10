@@ -1,0 +1,97 @@
+
+
+
+function getEvenNumbers() {
+        var arr = [1, 2, 3, 4, 5, 6];
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                document.writeln(arr[i] + "<br />");
+            }
+        }
+    }
+
+    getEvenNumbers();
+
+--------------------------------------------------------------------------------------------
+
+
+
+
+var findMaxConsecutiveOnes = function(nums) {
+    let largestCount = 0;
+    let currentCount = 0;
+    for (let i = 0; i<nums.length; i++) {
+        if (nums[i] === 0) {
+            currentCount = 0;
+        } else {
+            currentCount++;
+        };
+        if (currentCount > largestCount) largestCount = currentCount;
+    };
+    return largestCount;
+};
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+
+
+
+const a = [4,3,6,3,4,3]
+
+function count_duplicate(a){
+ let counts = {}
+
+ for(let i =0; i < a.length; i++){ 
+     if (counts[a[i]]){
+     counts[a[i]] += 1
+     } else {
+     counts[a[i]] = 1
+     }
+    }  
+    for (let prop in counts){
+        if (counts[prop] >= 2){
+            console.log(prop + " counted: " + counts[prop] + " times.")
+        }
+    }
+  console.log(counts)
+}
+
+count_duplicate(a)
+
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+
+var request = new XMLHttpRequest()
+request.open('GET', 'https://www.iana.org/domains/reserved', true)
+request.onload = function () {
+}
+request.send()
+
+
+
+---------------------------------------------------------------------------------------------------
+
+
+
+
+var obj = [
+  {"id" : 4, "name" : "abc"},
+  {"id" : 10, "name" : "ab2"},
+  {"id" : 5, "name" : "abc3"},
+  {"id" : 6, "name" : "abc5"}
+ ]
+
+obj.sort(function(a, b) {
+    return (a.id - b.id);
+}).sort(function(a, b) {
+    return (a.name - b.name);
+});
